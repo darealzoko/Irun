@@ -1,0 +1,38 @@
+recipe_version: 1
+package:
+  name: Notys
+  version: 1.9.3
+  description: note app
+  author: "_zoko"
+  id: "aaaa.0000.aaaa.0001"
+
+install_method: "binary"
+
+binary:
+  url: "https://github.com/darealzoko/Notys/releases/download/v1.9.3/Notys-linux-1.9.3.zip"
+  additional_urls: []
+  sha256: "dc48c6062f3cb8c6521526a110355f9a791c5371d3785df3d03049fb047b7c01"
+  bin_install_steps:
+    - "mkdir -p ~/.irun/pkg/Notys/bin/"
+    - "unzip Notys-linux-1.9.3.zip -d ~/.irun/pkg/Notys/bin/"
+
+source:
+  url: "https://github.com/darealzoko/Notys/releases/download/v1.9.3/Notys-build-env-1.9.3.zip"
+  additional_urls: []
+  sha256: "ba47dbd95e48f1a3923b8aed7b9537e93facc43d8f49911bcd28e0669f4fd299"
+  build_steps:
+    - "unzip Notys-build-env-1.9.3.zip -d ~/.irun/pkg/Notys/tmp/"
+    - "cd ~/.irun/pkg/Notys/tmp/Notys/"
+    - "python3 -m pip install --upgrade pip"
+    - "python3 -m pip install -r requirements.txt pyinstaller"
+    - "python3 -m PyInstaller --noconfirm Notys.spec"
+  install_steps:
+    - "mkdir -p ~/.irun/pkg/Notys/bin/"
+    - "mv dist/Notys/* ~/.irun/pkg/Notys/bin/"
+  
+dependencies:
+  runtime:
+    - "python3"
+    - "python3-tk"
+  build:
+    - "python3-pip"
