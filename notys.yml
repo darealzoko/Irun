@@ -13,8 +13,8 @@ binary:
   additional_urls: []
   sha256: "dc48c6062f3cb8c6521526a110355f9a791c5371d3785df3d03049fb047b7c01"
   bin_install_steps:
-    - "mkdir -p ~/.irun/pkg/Notys/bin/"
-    - "unzip Notys-linux-1.9.3.zip -d ~/.irun/pkg/Notys/bin/"
+    - "mkdir -p ~/.irun/pkg/notys/bin/"
+    - "unzip Notys-linux-1.9.3.zip -d ~/.irun/pkg/notys/bin/"
 
 source:
   url: "https://github.com/darealzoko/Notys/releases/download/v1.9.3/Notys-build-env-1.9.3.zip"
