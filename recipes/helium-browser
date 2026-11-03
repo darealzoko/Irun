@@ -1,0 +1,21 @@
+recipe_version: 1
+package:
+  name: "Helium-Browser"
+  version: 0.20.3.1
+  description: A lightweight browser based on Chromium
+  author: "Imput | Irun Official"
+  id: "aaaa.0000.aaaa.0002"
+
+install_method: "binary"
+
+binary:
+  url: "https://github.com/imputnet/helium-linux/releases/download/0.20.3.1/helium-0.20.3.1-x86_64_linux.tar.xz"
+  additional_urls: []
+  sha256: 3759ea4e95bf4ef4a0a6477e3d73576b0f03906f2e80357275bfc6cacafb5fac
+  bin_install_steps:
+    - "mkdir -p ~/.irun/pkg/helium-browser/bin/"
+    - "tar -xJf helium-0.20.3.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium-browser/bin/"
+
+dependencies:
+  runtime:
+    - "tar"
