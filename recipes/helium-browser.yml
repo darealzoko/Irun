@@ -17,7 +17,7 @@ binary:
   bin_install_steps:
     - "mkdir -p ~/.irun/pkg/helium-browser/bin/"
     - "tar -xJf helium-0.20.3.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium-browser/bin/"
-    - "mv ~/.irun/tmp/helium-browser.desktop ~/.local/share/applications/helium-browser.desktop"
+    - "cp ~/.irun/pkg/helium-browser/bin/helium-0.20.3.1-x86_64_linux/helium.desktop ~/.local/share/applications/helium-browser.desktop"
     - "kbuildsycoca6 --noincremental"
 
 dependencies:
