@@ -13,8 +13,8 @@ binary:
   additional_urls: []
   sha256: 3759ea4e95bf4ef4a0a6477e3d73576b0f03906f2e80357275bfc6cacafb5fac
   bin_install_steps:
-    - "mkdir -p ~/.irun/pkg/helium/bin/"
-    - "tar -xJf helium-0.20.3.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium/bin/"
+    - "mkdir -p ~/.irun/pkg/helium-browser/bin/"
+    - "tar -xJf helium-0.20.3.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium-browser/bin/"
 
 dependencies:
   runtime:
