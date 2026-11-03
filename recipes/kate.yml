@@ -1,0 +1,58 @@
+recipe_version: 1
+package:
+    name: kate
+    version: 26.08.2
+    description: Advanced Text Editor
+    author: "KDE | Irun Official"
+    id: "aaaa.0000.aaaa.0003"
+    repice_path: "~/.irun/pkg/kate/kate.yml"
+
+install_method: "source"
+
+source:
+    #url: "https://github.com/KDE/kate/archive/refs/tags/v26.08.2.zip"
+    url: "https://github.com/KDE/kate.git"
+    additional_urls:
+        - "https://github.com/darealzoko/Irun/blob/main/desktops/kate.desktop"
+        #- "https://github.com/KDE/kate/blob/master/CMakeLists.txt"
+        #- "https://github.com/KDE/kate/blob/master/CMakePresets.json"
+    sha256: ""
+    build_steps:
+        #- "echo Passing to the Compilation process"
+        - "cd ~/.irun/tmp/kate.git"
+        - "mkdir -p ~/.irun/pkg/kate/bin/"
+        - "cmake --preset release"
+        - "cd build-release"
+        - "cmake --build build-release --parallel $(nproc)"
+    install_steps:
+        #- "echo Passing to the Installation process"
+        #- "cp ~/.irun/tmp/kate.git/build-release/bin/kate ~/.irun/pkg/kate/bin/kate"
+        #- "mkdir -p ~/.irun/pkg/kate/bin/kf6"
+        - "mkdir ~/.irun/pkg/kate/icons/"
+        - "cp -r ~/.irun/tmp/kate.git/apps/kate/icons/unix/* ~/.irun/pkg/kate/icons/"
+        - "cp -r ~/.irun/tmp/kate.git/build-release/bin/* ~/.irun/pkg/kate/bin/"
+        #- "cp -r ~/.irun/tmp/kate.git/build-release/bin/kf6/* ~/.irun/pkg/kate/bin/kf6/"
+        #- "cp ~/.irun/tmp/kate.git/build-release/bin/libkateprivate.so.26.11.70 ~/.irun/pkg/bin/libkateprivate.so.26.11.70"
+        #- "cp ~/.irun/tmp/kate.git/build-release/bin/libkateprivate.so ~/.irun/pkg/bin/libkateprivate.so"
+        - "rm ~/.irun/pkg/kate/bin/kwrite"
+        - "cp ~/.irun/tmp/kate.desktop ~/.local/share/applications/kate.desktop"
+        - "kbuildsycoca6 --noincremental"
+
+dependecies:
+    build:
+        - "base-devel"
+        - "cmake"
+        - "ninja"
+        - "extra-cmake-modules"
+        - "qt6-base"
+        - "qt6-declarative"
+        - "qt6-tools"
+        - "kconfig"
+        - "kcoreaddons"
+        - "kcrash"
+        - "kdbusaddons"
+        - "kiconthemes"
+        - "kio"
+        - "kparts"
+        - "kwdigetsaddons"
+        - "syntax-highlighting"
