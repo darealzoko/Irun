@@ -12,12 +12,12 @@ install_method: "binary"
 binary:
   url: "https://github.com/imputnet/helium-linux/releases/download/0.20.3.1/helium-0.20.3.1-x86_64_linux.tar.xz"
   additional_urls:
-    - "https://github.com/darealzoko/Irun/blob/main/desktops/helium-browser.desktop"
+    - "https://github.com/darealzoko/Irun/blob/main/desktops/helium-browser.txt"
   sha256: 3759ea4e95bf4ef4a0a6477e3d73576b0f03906f2e80357275bfc6cacafb5fac
   bin_install_steps:
     - "mkdir -p ~/.irun/pkg/helium-browser/bin/"
     - "tar -xJf helium-0.20.3.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium-browser/bin/"
-    - "cp ~/.irun/tmp/helium-browser.desktop ~/.local/share/applications/helium-browser.desktop"
+    - "cp ~/.irun/tmp/helium-browser.txt ~/.local/share/applications/helium-browser.desktop"
     - "kbuildsycoca6 --noincremental"
 
 dependencies:
