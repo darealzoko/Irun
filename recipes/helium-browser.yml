@@ -5,6 +5,7 @@ package:
   description: A lightweight browser based on Chromium
   author: "Imput | Irun Official"
   id: "aaaa.0000.aaaa.0002"
+  recipe_path: "~/Bureau/helium-browser.yml"
 
 install_method: "binary"
 
