@@ -1,0 +1,16 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+GenericName=Advanced Text Editor
+Name=Kate
+Comment=KDE Advanced Text Editor
+MimeType=text/plain;
+Exec=~/.irun/pkg/kate/bin/kate -b %U
+StartupNotify=true
+X-KDE-HasTempFileOption=true
+Icon=~/.irun/pkg/kate/icons/256-apps-kate.png
+Type=Application
+Terminal=false
+InitialPreference=9
+X-DBUS-StartupType=Multi
+X-DBUS-ServiceName=org.kde.kate
+Categories=Qt;KDE;Utility;TextEditor;
