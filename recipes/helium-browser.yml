@@ -1,7 +1,7 @@
-recipe_version: 1
+recipe_version: 2
 package:
   name: helium-browser
-  version: 0.20.3.1
+  version: 0.21.1.1
   description: A lightweight browser based on Chromium
   author: "Imput | Irun Official"
   id: "aaaa.0000.aaaa.0002"
@@ -10,13 +10,13 @@ package:
 install_method: "binary"
 
 binary:
-  url: "https://github.com/imputnet/helium-linux/releases/download/0.20.3.1/helium-0.20.3.1-x86_64_linux.tar.xz"
+  url: "https://github.com/imputnet/helium-linux/releases/download/0.21.1.1/helium-0.21.1.1-x86_64_linux.tar.xz"
   additional_urls:
     - "https://github.com/darealzoko/Irun/blob/main/desktops/helium-browser.desktop"
-  sha256: 3759ea4e95bf4ef4a0a6477e3d73576b0f03906f2e80357275bfc6cacafb5fac
+  sha256: "6cd7f240153cb9c0cdfa27bf1a6651ddcae73a898afc449a93dd10da83b4bd45"
   bin_install_steps:
     - "mkdir -p ~/.irun/pkg/helium-browser/bin/"
-    - "tar -xJf helium-0.20.3.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium-browser/bin/"
+    - "tar -xJf helium-0.21.1.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium-browser/bin/"
     - "cp ~/.irun/tmp/helium-browser.desktop ~/.local/share/applications/helium-browser.desktop"
     - "kbuildsycoca6 --noincremental"
 
