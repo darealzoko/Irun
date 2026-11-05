@@ -2,7 +2,24 @@
   "packages": {
     "notys": {
       "name": "Notys",
-      "installed_version":
+      "last_refresh_version": "",
+      "installed_recipe_version": "",
+      "last_refresh_recipe_version": "",
+      "is_installed": ""
+    },
+    "kate": {
+      "name": "kate",
+      "last_refresh_version": "",
+      "installed_recipe_version": "",
+      "last_refresh_recipe_version": "",
+      "is_installed": ""
+    },
+    "helium-browser": {
+      "name": "helium-browser",
+      "last_refresh_version": "",
+      "installed_recipe_version": "",
+      "last_refresh_recipe_version": "",
+      "is_installed": ""
     }
   }
 }
