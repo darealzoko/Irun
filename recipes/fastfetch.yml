@@ -1,0 +1,26 @@
+recipe_version: 1
+package:
+  name: fastfetch
+  version: 2.70.0
+  description: "A maintained, feature-rich and performance oriented, neofetch like system information tool."
+  author: "Linus Dierheimer | Irun Official"
+  id: "aaaa.0000.aaaa.0004"
+
+install_method: "source"
+
+source:
+  url: "https://github.com/fastfetch-cli/fastfetch.git"
+  additional_urls: []
+  sha256: ""
+  build_steps:
+    - "mkdir -p ~/.irun/tmp/fastfetch.git/build"
+    - "cmake ~/.irun/tmp/fastfetch.git/build"
+    - "cmake --build ~/.irun/tmp/fastfetch.git/build --target fastfetch"
+  install_steps:
+    - ""
+
+dependencies:
+  runtime:
+    - ""
+  build:
+    - "CMake"
