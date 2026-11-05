@@ -14,7 +14,7 @@ source:
   sha256: ""
   build_steps:
     - "mkdir -p ~/.irun/tmp/fastfetch.git/build"
-    - "cmake ~/.irun/tmp/fastfetch.git/build"
+    - "cmake -S  ~/.irun/tmp/fastfetch.git -B ~/.irun/tmp/fastfetch.git/build"
     - "cmake --build ~/.irun/tmp/fastfetch.git/build --target fastfetch"
   install_steps:
     - ""
