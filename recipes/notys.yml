@@ -3,7 +3,7 @@ package:
   name: Notys
   version: 1.10.0
   description: note app
-  author: "_zoko"
+  author: "_zoko | Irun Official"
   id: "aaaa.0000.aaaa.0001"
 
 install_method: "binary"
