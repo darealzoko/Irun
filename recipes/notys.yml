@@ -1,7 +1,7 @@
-recipe_version: 1
+recipe_version: 2
 package:
   name: Notys
-  version: 1.9.3
+  version: 1.10.0
   description: note app
   author: "_zoko"
   id: "aaaa.0000.aaaa.0001"
@@ -9,19 +9,19 @@ package:
 install_method: "binary"
 
 binary:
-  url: "https://github.com/darealzoko/Notys/releases/download/v1.9.3/Notys-linux-1.9.3.zip"
+  url: "https://github.com/darealzoko/Notys/releases/download/v1.10.0/Notys-linux-1.10.0.zip"
   additional_urls: []
-  sha256: "dc48c6062f3cb8c6521526a110355f9a791c5371d3785df3d03049fb047b7c01"
+  sha256: "c3d9986b78effaac99483d27465e37f8f92f23bd340475187f467d249ae05ede"
   bin_install_steps:
     - "mkdir -p ~/.irun/pkg/notys/bin/"
-    - "unzip ~/.irun/tmp/Notys-linux-1.9.3.zip -d ~/.irun/pkg/notys/bin/"
+    - "unzip ~/.irun/tmp/Notys-linux-1.10.0.zip -d ~/.irun/pkg/notys/bin/"
 
 source:
-  url: "https://github.com/darealzoko/Notys/releases/download/v1.9.3/Notys-build-env-1.9.3.zip"
+  url: "https://github.com/darealzoko/Notys/releases/download/v1.10.0/Notys-build-env-1.10.0.zip"
   additional_urls: []
-  sha256: "ba47dbd95e48f1a3923b8aed7b9537e93facc43d8f49911bcd28e0669f4fd299"
+  sha256: "e358a91941430eaae4dfcefde5e2e3cedeb32f885d48f0ec0b3e1904460b4457"
   build_steps:
-    - "unzip ~/.irun/tmp/Notys-build-env-1.9.3.zip -d ~/.irun/pkg/notys/tmp/"
+    - "unzip ~/.irun/tmp/Notys-build-env-1.10.0.zip -d ~/.irun/pkg/notys/tmp/"
     - "cd ~/.irun/pkg/notys/tmp/Notys/"
     - "python3 -m pip install --upgrade pip"
     - "python3 -m pip install -r requirements.txt pyinstaller"
