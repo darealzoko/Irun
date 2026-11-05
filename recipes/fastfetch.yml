@@ -17,7 +17,8 @@ source:
     - "cmake -S  ~/.irun/tmp/fastfetch.git -B ~/.irun/tmp/fastfetch.git/build"
     - "cmake --build ~/.irun/tmp/fastfetch.git/build --target fastfetch"
   install_steps:
-    - ""
+    - "mkdir -p ~/.irun/pkg/fastfetch/bin"
+    - "cp ~/.irun/tmp/fastfetch.git/build/fastfetch ~/.irun/pkg/fastfetch/bin/fastfetch"
 
 dependencies:
   runtime:
