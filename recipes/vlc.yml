@@ -13,12 +13,13 @@ source:
   additional_urls: []
   sha256: ""
   build_steps:
-    - "tar -xf ~/.irun/tmp/vlc-3.0.24.tar.xz"
-    - "sudo chown -R $USER:$(id -gn) ~/.irun/tmp/vlc-3.0.24"
+    - "tar -xf ~/.irun/tmp/vlc-3.0.24.tar.xz -C ~/.irun/tmp"
+    - "cd ~/.irun/tmp/vlc-3.0.24 && ./bootstrap"
+    - "cd ~/.irun/tmp/vlc-3.0.24 && ./configure"
     - "make -C ~/.irun/tmp/vlc-3.0.24 -j$(nproc)"
-  install_steps:
     - "sudo make -C ~/.irun/tmp/vlc-3.0.24 install"
     - "sudo ldconfig"
+  install_steps:
 
 
 dependencies:
