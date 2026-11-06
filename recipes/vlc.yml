@@ -19,7 +19,7 @@ source:
     - "make -C ~/.irun/tmp/vlc-3.0.24 -j$(nproc)"
     - "sudo make -C ~/.irun/tmp/vlc-3.0.24 install"
     - "sudo ldconfig"
-  install_steps:
+  install_steps: []
 
 
 dependencies:
