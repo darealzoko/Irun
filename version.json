@@ -35,11 +35,12 @@
       "last_refresh_recipe_version": "",
       "is_installed": ""
     },
-    "vlc":
+    "vlc": {
       "name": "vlc",
       "last_refresh_version": "",
       "installed_recipe_version": "",
       "last_refresh_recipe_version": "",
       "is_installed": ""
+    }
   }
 }
