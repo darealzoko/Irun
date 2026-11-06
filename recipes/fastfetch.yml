@@ -19,6 +19,7 @@ source:
   install_steps:
     - "mkdir -p ~/.irun/pkg/fastfetch/bin"
     - "cp ~/.irun/tmp/fastfetch.git/build/fastfetch ~/.irun/pkg/fastfetch/bin/fastfetch"
+    - "sudo rm /usr/local/bin/fastfetch"
     - "sudo ln -s ~/.irun/pkg/fastfetch/bin/fastfetch /usr/local/bin/fastfetch"
 
 dependencies:
