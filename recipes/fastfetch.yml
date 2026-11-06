@@ -1,4 +1,4 @@
-recipe_version: 1
+recipe_version: 2
 package:
   name: fastfetch
   version: 2.70.0
@@ -19,7 +19,7 @@ source:
   install_steps:
     - "mkdir -p ~/.irun/pkg/fastfetch/bin"
     - "cp ~/.irun/tmp/fastfetch.git/build/fastfetch ~/.irun/pkg/fastfetch/bin/fastfetch"
-    - "sudo rm /usr/local/bin/fastfetch"
+    - "[ -f /usr/local/bin/fastfetch ] && sudo rm -f /usr/local/bin/fastfetch"
     - "sudo ln -s ~/.irun/pkg/fastfetch/bin/fastfetch /usr/local/bin/fastfetch"
 
 dependencies:
