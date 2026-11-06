@@ -1,4 +1,4 @@
-recipe_version: 2
+recipe_version: 3
 package:
   name: vlc
   version: 3.0.24
@@ -20,7 +20,7 @@ source:
   install_steps:
     - "sudo make -C ~/.irun/tmp/vlc-3.0.24 install"
     - "sudo ldconfig"
-    - "echo 'WARNING: VLC does not currently have a .desktop to have a GUI entry. Please use vlc in the terminal by writing in it vlc to execute it'"
+    - "echo -e '\033[38;5;208mWARNING: VLC does not currently have a .desktop to have a GUI entry. Please use vlc in the terminal by writing in it vlc to execute it\033[0m'"
 
 
 dependencies:
