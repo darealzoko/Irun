@@ -1,4 +1,4 @@
-recipe_veresion: 1
+recipe_veresion: 2
 package:
   name: firefox
   version: 161.0b1.build1
@@ -6,23 +6,17 @@ package:
   author: "Mozilla | Irun Official"
   id: "aaaa.0000.aaaa.0005"
 
-install_method: "source"
+install_method: "binary"
 
-source:
-  url: "https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/main/python/mozboot/bin/bootstrap.py"
+binary:
+  url: "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64"
   additional_urls: []
   sha256: ""
-  build_steps:
-    - "python3 ~/.irun/tmp/bootstrap.py"
-    - "git -C ~/.irun/tmp/firefox/ pull"
-    - "bash ~/.irun/tmp/firefox/mach build"
-  install_steps:
+  bin_install_steps:
     - ""
 
 dependencies:
   runtime:
     - ""
   build:
-    - "python3"
-    - "git"
-    - "make"
+    - ""
