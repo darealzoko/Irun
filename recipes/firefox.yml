@@ -16,7 +16,7 @@ binary:
     - "mkdir -p ~/.irun/tmp/firefox/"
     - "mkdir -p ~/.irun/pkg/firefox/bin"
     - "tar -xf ~/.irun/tmp/firefox-checkout"
-    - "cp -r ~/.irun/tmp/firefox/* ~/.irun/pkg/firefox/bin/*"
+    - "cp -r ~/.irun/tmp/firefox/* ~/.irun/pkg/firefox/bin/"
 dependencies:
   runtime:
     - ""
