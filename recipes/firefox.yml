@@ -1,0 +1,28 @@
+recipe_veresion: 1
+package:
+  name: firefox
+  version: 161.0b1.build1
+  description: "Firefox Browser, by Mozilla."
+  author: "Mozilla | Irun Official"
+  id: "aaaa.0000.aaaa.0005"
+
+install_method: "source"
+
+source:
+  url: "https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/main/python/mozboot/bin/bootstrap.py"
+  additional_urls: []
+  sha256: ""
+  build_steps:
+    - "python3 ~/.irun/tmp/bootstrap.py"
+    - "git -C ~/.irun/tmp/firefox/ pull"
+    - "bash ~/.irun/tmp/firefox/mach build"
+  install_steps:
+    - ""
+
+dependencies:
+  runtime:
+    - ""
+  build:
+    - "python3"
+    - "git"
+    - "make"
