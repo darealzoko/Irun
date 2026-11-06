@@ -17,9 +17,10 @@ source:
     - "cd ~/.irun/tmp/vlc-3.0.24 && ./bootstrap"
     - "cd ~/.irun/tmp/vlc-3.0.24 && ./configure"
     - "make -C ~/.irun/tmp/vlc-3.0.24 -j$(nproc)"
+  install_steps:
     - "sudo make -C ~/.irun/tmp/vlc-3.0.24 install"
     - "sudo ldconfig"
-  install_steps: []
+    - "echo 'WARNING: VLC does not currently have a .desktop to have a GUI entry. Please use vlc in the terminal by writing in it vlc to execute it'"
 
 
 dependencies:
