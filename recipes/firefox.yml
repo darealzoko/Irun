@@ -1,4 +1,4 @@
-recipe_veresion: 4
+recipe_veresion: 5
 package:
   name: firefox
   version: 161.0b1.build1
@@ -17,6 +17,8 @@ binary:
     - "mkdir -p ~/.irun/pkg/firefox/bin"
     - "tar -xf ~/.irun/tmp/firefox-checkout"
     - "cp -r ~/.irun/tmp/firefox/* ~/.irun/pkg/firefox/bin/"
+    - "if [ -e /usr/local/bin/firefox ]; then sudo rm -f /usr/local/bin/firefox; fi"
+    - "sudo ln -s ~/.irun/pkg/firefox/bin/firefox /usr/local/bin/firefox"
 dependencies:
   runtime:
     - ""
