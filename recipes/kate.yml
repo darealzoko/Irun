@@ -1,7 +1,7 @@
-recipe_version: 1
+recipe_version: 2
 package:
     name: kate
-    version: 26.08.2
+    version: 26.08.3
     description: Advanced Text Editor
     author: "KDE | Irun Official"
     id: "aaaa.0000.aaaa.0003"
@@ -39,6 +39,8 @@ source:
         - "kbuildsycoca6 --noincremental"
 
 dependecies:
+    runtime:
+        - ""
     build:
         - "base-devel"
         - "cmake"
