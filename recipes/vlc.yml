@@ -1,4 +1,4 @@
-recipe_version: 1
+recipe_version: 2
 package:
   name: vlc
   version: 3.0.24
