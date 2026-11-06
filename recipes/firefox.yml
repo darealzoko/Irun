@@ -1,4 +1,4 @@
-recipe_veresion: 5
+recipe_veresion: 2
 package:
   name: firefox
   version: 161.0b1.build1
