@@ -1,0 +1,28 @@
+recipe_version: 1
+package:
+  name: vlc
+  version: 3.0.24
+  description: "VLC is a video player"
+  author: "Jean-Baptiste Kempf"
+  id: "aaaa.0000.aaaa.0006"
+
+install_method: "source"
+
+source:
+  url: "https://ftp.free.org/mirrors/videolan/vlc/3.0.24/vlc-3.0.24.tar.xz"
+  additional_urls: []
+  sha256: ""
+  build_steps:
+    - "tar -xf ~/.irun/tmp/vlc-3.0.24.tar.xz"
+    - "sudo chown -R $USER:$(id -gn) ~/.irun/tmp/vlc-3.0.24"
+    - "make -C ~/.irun/tmp/vlc-3.0.24 -j$(nproc)"
+    - "sudo make -C ~/.irun/tmp/vlc-3.0.24 install"
+    - "sudo ldconfig"
+  install_steps:
+    - ""
+
+dependencies:
+  runtime:
+    - ""
+  build:
+    - "cmake"
