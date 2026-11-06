@@ -16,10 +16,10 @@ source:
     - "tar -xf ~/.irun/tmp/vlc-3.0.24.tar.xz"
     - "sudo chown -R $USER:$(id -gn) ~/.irun/tmp/vlc-3.0.24"
     - "make -C ~/.irun/tmp/vlc-3.0.24 -j$(nproc)"
+  install_steps:
     - "sudo make -C ~/.irun/tmp/vlc-3.0.24 install"
     - "sudo ldconfig"
-  install_steps:
-    - ""
+
 
 dependencies:
   runtime:
