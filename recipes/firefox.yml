@@ -1,4 +1,4 @@
-recipe_veresion: 3
+recipe_veresion: 4
 package:
   name: firefox
   version: 161.0b1.build1
@@ -14,9 +14,9 @@ binary:
   sha256: ""
   bin_install_steps:
     - "mkdir -p ~/.irun/tmp/firefox/"
+    - "mkdir -p ~/.irun/pkg/firefox/bin"
     - "tar -xf ~/.irun/tmp/firefox-checkout"
-    - "unzip ~/.irun/tmp/firefox-checkout.uncompressed ~/.irun/tmp/firefox/"
-
+    - "cp -r ~/.irun/tmp/firefox/* ~/.irun/pkg/firefox/bin/*"
 dependencies:
   runtime:
     - ""
