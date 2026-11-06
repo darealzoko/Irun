@@ -1,7 +1,7 @@
-recipe_version: 7
+recipe_version: 8
 package:
   name: firefox
-  version: 159.0.0
+  version: 159.0.1
   description: "Firefox Browser, by Mozilla."
   author: "Mozilla | Irun Official"
   id: "aaaa.0000.aaaa.0005"
