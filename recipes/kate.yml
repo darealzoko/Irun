@@ -1,11 +1,11 @@
-recipe_version: 2
+recipe_version: 3
 package:
     name: kate
     version: 26.08.3
     description: Advanced Text Editor
     author: "KDE | Irun Official"
     id: "aaaa.0000.aaaa.0003"
-    repice_path: "~/.irun/pkg/kate/kate.yml"
+    recipe_path: "~/.irun/pkg/kate/kate.yml"
 
 install_method: "source"
 
@@ -28,7 +28,7 @@ source:
         #- "echo Passing to the Installation process"
         #- "cp ~/.irun/tmp/kate.git/build-release/bin/kate ~/.irun/pkg/kate/bin/kate"
         #- "mkdir -p ~/.irun/pkg/kate/bin/kf6"
-        - "mkdir ~/.irun/pkg/kate/icons/"
+        - "mkdir -p ~/.irun/pkg/kate/icons/"
         - "cp -r ~/.irun/tmp/kate.git/apps/kate/icons/unix/* ~/.irun/pkg/kate/icons/"
         - "cp -r ~/.irun/tmp/kate.git/build-release/bin/* ~/.irun/pkg/kate/bin/"
         #- "cp -r ~/.irun/tmp/kate.git/build-release/bin/kf6/* ~/.irun/pkg/kate/bin/kf6/"
