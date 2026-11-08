@@ -1,4 +1,4 @@
-recipe_version: 3
+recipe_version: 4
 package:
   name: helium-browser
   version: 0.21.1.1
@@ -19,6 +19,8 @@ binary:
     - "tar -xJf helium-0.21.1.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium-browser/bin/"
     - "cp ~/.irun/tmp/helium-browser.desktop ~/.local/share/applications/helium-browser.desktop"
     - "mkdir -p ~/.local/share/applications"
+    - "if [ -e /usr/local/bin/helium ]; then sudo rm -f /usr/local/bin/helium; fi"
+    - "sudo ln -s ~/.irun/pkg/helium-browser/bin/helium-0.21.1.1-x86_64_linux/helium /usr/local/bin/helium"
 
 dependencies:
   runtime:
