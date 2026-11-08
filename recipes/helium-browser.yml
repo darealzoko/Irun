@@ -1,4 +1,4 @@
-recipe_version: 2
+recipe_version: 3
 package:
   name: helium-browser
   version: 0.21.1.1
@@ -18,7 +18,7 @@ binary:
     - "mkdir -p ~/.irun/pkg/helium-browser/bin/"
     - "tar -xJf helium-0.21.1.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium-browser/bin/"
     - "cp ~/.irun/tmp/helium-browser.desktop ~/.local/share/applications/helium-browser.desktop"
-    - "kbuildsycoca6 --noincremental"
+    - "mkdir -p ~/.local/share/applications"
 
 dependencies:
   runtime:
