@@ -33,14 +33,18 @@ Before using or creating recipes with Irun, make sure your system has the follow
 
 ## Recommended Build Environment
 - cmake
+- gcc
 - base-devel (or equivalent build-essential package)
 - vulkan-headers
 - tar
 - unzip
+- pip
 
 ## Arch Linux Package Names
 - yaml
 - python3
+- python-pip
+- gcc
 - cmake
 - base-devel
 - vulkan-headers
