@@ -1,0 +1,24 @@
+
+recipe_version: 1
+package:
+  name: CMake
+  version: 3.31.5
+  description: A C compilor
+  author: "Kitware | Irun Official"
+  id: "aaaa.0000.aaaa.0007"
+  recipe_path: "~/.irun/pkg/cmake/cmake.yml"
+
+install_method: "binary"
+
+binary:
+  url: "https://github.com/Kitware/CMake/releases/download/v3.31.5/cmake-3.31.5-linux-x86_64.tar.gz"
+  additional_urls: []
+  sha256: ""
+  bin_install_steps:
+    - "tar -xzf ~/.irun/tmp/cmake.tar.gz -C ~/.irun/tmp/"
+    - "cp -r ~/.irun/tmp/cmake-3.31.5-linux-x86_64/bin/* ~/.local/bin/"
+    - "cp -r ~/.irun/tmp/cmake-3.31.5-linux-x86_64/share/cmake-* ~/.local/share/ 2>/dev/null || true"
+
+dependencies:
+  runtime:
+    - "tar"
