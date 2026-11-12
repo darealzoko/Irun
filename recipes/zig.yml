@@ -1,6 +1,6 @@
 recipe_version: 2
 package:
-  name: GCC
+  name: zig
   version: 0.13.0
   description: A C compiler
   author: "@ | Irun Official"
