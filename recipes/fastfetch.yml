@@ -1,4 +1,4 @@
-recipe_version: 7
+recipe_version: 8
 package:
   name: fastfetch
   version: 2.71.0
@@ -20,7 +20,7 @@ source:
     - "mkdir -p ~/.irun/pkg/fastfetch/bin"
     - "cp ~/.irun/tmp/fastfetch.git/build/fastfetch ~/.irun/pkg/fastfetch/bin/fastfetch"
     - "if [ -e $HOME/local/bin/fastfetch ]; then sudo rm -f $HOME/local/bin/fastfetch; fi"
-    - "sudo ln -s ~/.irun/pkg/fastfetch/bin/fastfetch $HOME/local/bin/fastfetch"
+    - "sudo ln  ~/.irun/pkg/fastfetch/bin/fastfetch $HOME/local/bin/fastfetch"
 
 dependencies:
   runtime:
