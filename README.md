@@ -8,6 +8,8 @@ Irun is a package manager for Linux distributions designed around absolute user 
 - A basic knowledge of what is and how to use APT.
 - A basic programming (like Python or other and Json/YaML or other).
 
+**Warning: Also keep in mind that Irun is still in EXTREME early days. There are NO security whatsoever, the UX is practically non-existant and the few .desktop there is does NOT work on every configurations and every desktop environment. PLEASE do NOT use this as your primarily package manager! I WARNED YOU! It WILL NOT be a good time!**
+
 Irun's concept is that anyone, anywhere, at any time can create, implement, and maintain their own packages. You do not need to wait for upstream maintainers, manage complex build pipelines, or navigate restrictive distribution rules. With minimal terminal experience, basic programming concepts, and more or less time (depending on the package you want), you can turn any software into an installable recipe for your system.
 
 ---
