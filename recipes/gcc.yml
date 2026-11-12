@@ -1,4 +1,4 @@
-recipe_version: 1
+recipe_version: 2
 package:
   name: GCC
   version: 0.13.0
@@ -14,7 +14,7 @@ binary:
   sha256: ""
   bin_install_steps:
     - "tar -xf ~/.irun/tmp/zig-linux-x86_64-0.13.0.tar.xz -C ~/.irun/tmp/"
-    - "mv ~/.irun/tmp/zig-linux-x86_64-0.13.0/zig ~/.local/bin/
+    - "mv ~/.irun/tmp/zig-linux-x86_64-0.13.0/zig ~/.local/bin/"
 
 dependencies:
   runtime:
