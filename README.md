@@ -101,6 +101,29 @@ irun clean
 ```
 It is recommended to run the clean command after heavy package updates, large source compilations, or whenever disk space needs to be reclaimed.
 
+## Informations
+You can get a lot of informations of the packages WITHOUT even installing the package.
+You can get every info commands by typing "irun info -h" in your terminal.
+Here's the info -h command and some comments for easier interpretation:
+usage: irun info [-h] (-d | -v | -i | --install-method | --id | --desktop) target
+
+```bash
+positional arguments:
+  target            Package name or ID
+
+options:
+  -h, --help        show this help message and exit
+  -d                Show dependencies
+  -v                Show package and recipe versions
+  -i                Show installation status
+  --install-method  Show install method
+  --id              Show package ID
+  --desktop         Show the package desktop file's file path
+
+example:
+"irun info -v firefox" to print version informations of Firefox
+```
+
 ---
 
 # Creating Your Own Package Recipe
