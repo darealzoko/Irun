@@ -1,4 +1,4 @@
-recipe_version: 10
+recipe_version: 7
 package:
   name: fastfetch
   version: 2.71.0
