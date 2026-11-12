@@ -1,5 +1,4 @@
-
-recipe_version: 1
+recipe_version: 2
 package:
   name: CMake
   version: 3.31.5
@@ -15,7 +14,7 @@ binary:
   additional_urls: []
   sha256: ""
   bin_install_steps:
-    - "tar -xzf ~/.irun/tmp/cmake.tar.gz -C ~/.irun/tmp/"
+    - "tar -xzf ~/.irun/tmp/cmake-3.31.5-linux-x86_64.tar.gz -C ~/.irun/tmp/"
     - "cp -r ~/.irun/tmp/cmake-3.31.5-linux-x86_64/bin/* ~/.local/bin/"
     - "cp -r ~/.irun/tmp/cmake-3.31.5-linux-x86_64/share/cmake-* ~/.local/share/ 2>/dev/null || true"
 
