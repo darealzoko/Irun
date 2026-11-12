@@ -1,0 +1,23 @@
+recipe_version: 1
+package:
+  name: GCC
+  version: 0.13.0
+  description: A C compiler
+  author: "@ | Irun Official"
+  id: "aaaa.0000.aaaa.0008"
+
+install_method: "binary"
+
+binary:
+  url: "https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz"
+  additional_urls: []
+  sha256: ""
+  bin_install_steps:
+    - "tar -xf ~/.irun/tmp/zig-linux-x86_64-0.13.0.tar.xz -C ~/.irun/tmp/"
+    - "mv ~/.irun/tmp/zig-linux-x86_64-0.13.0/zig ~/.local/bin/
+
+dependencies:
+  runtime:
+    - ""
+  build:
+    - ""
