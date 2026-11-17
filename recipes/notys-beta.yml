@@ -16,8 +16,8 @@ source:
     - "mkdir ~/.irun/tmp/notys"
     - "unzip ~/.irun/tmp/Notys-build-env-1.11.0-Beta3.zip -d ~/.irun/tmp/notys/"
     - "cd ~/.irun/tmp/notys/Notys"
-    - "python3 -m pip install --upgrade pip"
-    - "python3 -m pip install -r requirements.txt pyinstaller"
+    - "python3 -m pip install --upgrade pip --break-system-packages"
+    - "python3 -m pip install -r requirements.txt pyinstaller --break-system-packages"
     - "python3 -m PyInstaller --noconfirm Notys.spec"
   install_steps:
     - "mkdir -p ~/.irun/pkg/notys/bin/"
