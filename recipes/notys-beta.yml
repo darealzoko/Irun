@@ -1,4 +1,4 @@
-recipe_version: 3
+recipe_version: 4
 package:
   name: Notys-Beta-Preview
   version: 1.11.0.b3
@@ -13,6 +13,7 @@ source:
   additional_urls: []
   sha256: "0e84086a56bbebfc5c76fb040af2ee2f585dbb712b2ab8e13daff5f035ec84d5"
   build_steps:
+    - "mkdir ~/.irun/tmp/notys"
     - "unzip ~/.irun/tmp/Notys-build-env-1.11.0-Beta3.zip -d ~/.irun/pkg/notys/tmp/"
     - "cd ~/.irun/pkg/notys/tmp/Notys/"
     - "python3 -m pip install --upgrade pip"
