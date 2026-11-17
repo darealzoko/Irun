@@ -16,9 +16,8 @@ source:
     - "cd ~/.irun/tmp"
     - "ls"
     - "unzip curl-8.23.0.zip"
-    - "mv curl-8.23.0 curl"
-    - "cmake curl/"
-    - "cmake --build curl/"
+    - "cmake curl-8.23.0/"
+    - "cmake --build curl-8.23.0/"
   install_steps:
     - ""
     
