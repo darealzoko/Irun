@@ -1,4 +1,4 @@
-recipe_version: 1
+recipe_version: 2
 package:
   name: curl
   version: 8.23.0
@@ -12,13 +12,10 @@ binary:
   url: "https://curl.se/download/curl-8.23.0.zip"
   additional_urls: []
   sha256: ""
-  build_steps:
+  bin_install_steps:
     - "cd ~/.irun/tmp"
     - "ls"
-  install_steps:
-    - ""
-
-
+    
 dependencies:
   runtime:
     - "curl"
