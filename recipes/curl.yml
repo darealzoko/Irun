@@ -18,6 +18,8 @@ source:
     - "unzip curl-8.23.0.zip"
     - "chmod +x curl-8.23.0/compile"
     - "./curl-8.23.0/compile"
+  install_steps:
+    - ""
     
 dependencies:
   runtime:
