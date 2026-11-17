@@ -1,6 +1,6 @@
-recipe_version: 1
+recipe_version: 2
 package:
-  name: Notys Beta Preview
+  name: "Notys Beta Preview"
   version: 1.11.0.b3
   description: note app
   author: "_zoko | Irun Official"
