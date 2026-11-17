@@ -14,14 +14,14 @@ source:
   sha256: "0e84086a56bbebfc5c76fb040af2ee2f585dbb712b2ab8e13daff5f035ec84d5"
   build_steps:
     - "mkdir ~/.irun/tmp/notys"
-    - "unzip ~/.irun/tmp/Notys-build-env-1.11.0-Beta3.zip -d ~/.irun/pkg/notys/tmp/"
-    - "cd ~/.irun/pkg/notys/tmp/Notys/"
+    - "unzip ~/.irun/tmp/Notys-build-env-1.11.0-Beta3.zip -d ~/.irun/tmp/notys/"
+    - "cd ~/.irun/tmp/notys"
     - "python3 -m pip install --upgrade pip"
     - "python3 -m pip install -r requirements.txt pyinstaller"
     - "python3 -m PyInstaller --noconfirm Notys.spec"
   install_steps:
     - "mkdir -p ~/.irun/pkg/notys/bin/"
-    - "mv dist/Notys/* ~/.irun/pkg/notys/bin/"
+    - "mv ~/.irun/tmp/notys/dist/Notys/* ~/.irun/pkg/notys/bin/"
   
 dependencies:
   runtime:
