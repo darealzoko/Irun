@@ -15,6 +15,7 @@ binary:
   bin_install_steps:
     - "cd ~/.irun/tmp"
     - "ls"
+    - "unzip curl-8.23.0.zip -d curl/"
     
 dependencies:
   runtime:
