@@ -18,7 +18,7 @@ source:
     - "cd ~/.irun/tmp/notys/Notys"
     - "python3 -m pip install --upgrade pip --break-system-packages"
     - "ls -la"
-    #- "python3 -m pip install -r requirements.txt pyinstaller --break-system-packages"
+    - "python3 -m pip install -r notys/Notys/requirements.txt pyinstaller --break-system-packages"
     #- "python3 -m PyInstaller --noconfirm Notys.spec"
   install_steps:
     #- "mkdir -p ~/.irun/pkg/notys/bin/"
