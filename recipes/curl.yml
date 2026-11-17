@@ -18,8 +18,8 @@ source:
     - "unzip curl-8.23.0.zip"
     - "cd ~/.irun/tmp/curl-8.23.0"
     - "ls"
-    #- "cmake ."
-    #- "cmake --build ."
+    - "cmake -S curl-8.23.0 -B curl-8.23.0/build"
+    - "cmake --build curl-8.23.0/build"
   install_steps:
     - ""
     
