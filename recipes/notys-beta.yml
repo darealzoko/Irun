@@ -1,0 +1,30 @@
+recipe_version: 1
+package:
+  name: Notys Beta Preview
+  version: 1.11.0.b3
+  description: note app
+  author: "_zoko | Irun Official"
+  id: "aaaa.0000.aaaa.0009"
+
+install_method: "source"
+
+source:
+  url: "https://github.com/darealzoko/Notys/releases/download/v1.11.0.b3/Notys-build-env-1.11.0-Beta3.zip"
+  additional_urls: []
+  sha256: "0e84086a56bbebfc5c76fb040af2ee2f585dbb712b2ab8e13daff5f035ec84d5"
+  build_steps:
+    - "unzip ~/.irun/tmp/Notys-build-env-1.11.0-Beta3.zip -d ~/.irun/pkg/notys/tmp/"
+    - "cd ~/.irun/pkg/notys/tmp/Notys/"
+    - "python3 -m pip install --upgrade pip"
+    - "python3 -m pip install -r requirements.txt pyinstaller"
+    - "python3 -m PyInstaller --noconfirm Notys.spec"
+  install_steps:
+    - "mkdir -p ~/.irun/pkg/notys/bin/"
+    - "mv dist/Notys/* ~/.irun/pkg/notys/bin/"
+  
+dependencies:
+  runtime:
+    - "python3"
+    - "python3-tk"
+  build:
+    - "python3-pip"
