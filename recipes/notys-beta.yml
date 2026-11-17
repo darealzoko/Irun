@@ -1,6 +1,6 @@
 recipe_version: 5
 package:
-  name: Notys-Beta-Preview
+  name: Notys-Beta
   version: 1.11.0.b3
   description: note app
   author: "_zoko | Irun Official"
@@ -19,12 +19,11 @@ source:
     - "python3 -m pip install --upgrade pip --break-system-packages"
     - "ls -la"
     - "python3 -m pip install -r notys/Notys/requirements.txt pyinstaller --break-system-packages"
-    #- "python3 -m PyInstaller --noconfirm Notys.spec"
+    - "python3 -m PyInstaller --noconfirm Notys.spec"
   install_steps:
-    #- "mkdir -p ~/.irun/pkg/notys/bin/"
-    #- "mv ~/.irun/tmp/notys/Notys/dist/Notys/* ~/.irun/pkg/notys/bin/"
-    - ""
-  
+    - "mkdir -p ~/.irun/pkg/notys/bin/"
+    - "mv ~/.irun/tmp/notys/Notys/dist/Notys/* ~/.irun/pkg/notys/bin/"
+      
 dependencies:
   runtime:
     - "python3"
