@@ -1,0 +1,25 @@
+recipe_version: 1
+package:
+  name: rustup
+  version: 1.100.0
+  description: "Rustup is a toolchain for the Rust Programming Language"
+  author: "Diggory Blake | Irun Official"
+  id: "aaaa.0000.aaaa.0010"
+
+install_method: "binary"
+
+binary:
+  url: ""
+  additional_urls: []
+  sha256: ""
+  build_steps:
+    - "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+  install_steps:
+    - ""
+
+
+dependencies:
+  runtime:
+    - "curl"
+  build:
+    - ""
