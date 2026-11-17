@@ -17,8 +17,9 @@ source:
     - "ls"
     - "unzip curl-8.23.0.zip"
     - "cd curl-8.23.0"
-    - "cmake ."
-    - "cmake --build ."
+    - "ls"
+    #- "cmake ."
+    #- "cmake --build ."
   install_steps:
     - ""
     
