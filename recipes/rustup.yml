@@ -1,4 +1,4 @@
-recipe_version: 1
+recipe_version: 2
 package:
   name: rustup
   version: 1.100.0
@@ -12,10 +12,8 @@ binary:
   url: ""
   additional_urls: []
   sha256: ""
-  build_steps:
+  bin_install_steps:
     - "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
-  install_steps:
-    - ""
 
 
 dependencies:
