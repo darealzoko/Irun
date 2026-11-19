@@ -1,8 +1,8 @@
 
-recipe_version: 7
+recipe_version: 8
 package:
   name: helium-browser
-  version: 0.21.1.1
+  version: 0.22.1.1
   description: A lightweight browser based on Chromium
   author: "Imput | Irun Official"
   id: "aaaa.0000.aaaa.0002"
@@ -11,16 +11,15 @@ package:
 install_method: "binary"
 
 binary:
-  url: "https://github.com/imputnet/helium-linux/releases/download/0.21.1.1/helium-0.21.1.1-x86_64_linux.tar.xz"
-  additional_urls:
-    - "https://github.com/darealzoko/Irun/blob/main/desktops/helium-browser.desktop"
+  url: "https://github.com/imputnet/helium-linux/releases/download/0.22.1.1/helium-0.22.1.1-x86_64_linux.tar.xz"
+  additional_urls: []
   sha256: "6cd7f240153cb9c0cdfa27bf1a6651ddcae73a898afc449a93dd10da83b4bd45"
   bin_install_steps:
     - "mkdir -p ~/.irun/pkg/helium-browser/bin/"
-    - "tar -xJf helium-0.21.1.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium-browser/bin/"
+    - "tar -xJf helium-0.22.1.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium-browser/bin/"
     - |
       mkdir -p ~/.local/share/applications ~/.local/share/icons
-      cp ~/.irun/pkg/helium-browser/bin/helium-0.21.1.1-x86_64_linux/product_logo_256.png ~/.local/share/icons/helium.png
+      cp ~/.irun/pkg/helium-browser/bin/helium-0.22.1.1-x86_64_linux/product_logo_256.png ~/.local/share/icons/helium.png
       cat > ~/.local/share/applications/helium-browser.desktop <<'EOF'
       [Desktop Entry]
       Version=1.0
@@ -29,7 +28,7 @@ binary:
       GenericName[fr]=Navigateur Web
       Comment=Access the Internet
       Comment[fr]=Accéder à Internet
-      Exec=/usr/local/bin/helium %U
+      Exec=$HOME/.local/bin/helium %U
       StartupNotify=true
       Terminal=false
       Icon=helium
@@ -42,18 +41,18 @@ binary:
       [Desktop Action new-window]
       Name=New Window
       Name[fr]=Nouvelle fenêtre
-      Exec=/usr/local/bin/helium
+      Exec=$HOME/.local/bin/helium
 
       [Desktop Action new-private-window]
       Name=New Incognito Window
       Name[fr]=Nouvelle fenêtre de navigation privée
-      Exec=/usr/local/bin/helium --incognito
+      Exec=$HOME/.local/bin/helium --incognito
       EOF
       chmod 644 ~/.local/share/applications/helium-browser.desktop
       update-desktop-database ~/.local/share/applications/
       desktop-file-validate ~/.local/share/applications/helium-browser.desktop
-    - "if [ -e /usr/local/bin/helium ]; then sudo rm -f /usr/local/bin/helium; fi"
-    - "sudo ln -s ~/.irun/pkg/helium-browser/bin/helium-0.21.1.1-x86_64_linux/helium /usr/local/bin/helium"
+    - "if [ -e $HOME/.local/bin/helium ]; then sudo rm -f $HOME/.local/bin/helium; fi"
+    - "sudo ln -s ~/.irun/pkg/helium-browser/bin/helium-0.22.1.1-x86_64_linux/helium $HOME/.local/bin/helium"
 
 dependencies:
   runtime:
