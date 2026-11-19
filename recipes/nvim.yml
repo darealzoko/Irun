@@ -20,6 +20,9 @@ binary:
     - "cp -r nvim-linux-x86_64/* ~/.irun/pkg/nvim/bin/"
     - "if [ -e $HOME/.local/bin/nvim ]; then sudo rm -f $HOME/.local/bin/nvim; fi"
     - "sudo ln -s ~/.irun/pkg/nvim/bin/bin/nvim $HOME/.local/bin/nvim"
+    - "echo"
+    - "echo"
+    - "echo Make sure you have ~/.local/bin in your PATH"
 
 
 dependencies:
