@@ -13,7 +13,7 @@ install_method: "binary"
 binary:
   url: "https://github.com/imputnet/helium-linux/releases/download/0.22.1.1/helium-0.22.1.1-x86_64_linux.tar.xz"
   additional_urls: []
-  sha256: "6cd7f240153cb9c0cdfa27bf1a6651ddcae73a898afc449a93dd10da83b4bd45"
+  sha256: "e415898b51bf1c41d6bd7d44027776c99bf36d9e0ee7416c1d8bf0de53b6ea0c"
   bin_install_steps:
     - "mkdir -p ~/.irun/pkg/helium-browser/bin/"
     - "tar -xJf helium-0.22.1.1-x86_64_linux.tar.xz -C ~/.irun/pkg/helium-browser/bin/"
