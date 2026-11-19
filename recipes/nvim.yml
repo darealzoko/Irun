@@ -1,4 +1,4 @@
-recipe_version: 1
+recipe_version: 2
 package:
   name: nvim
   version: 0.12.6
@@ -18,6 +18,8 @@ binary:
     - "tar -xvzf nvim-linux-x86_64.tar.gz"
     - "mkdir ~/.irun/pkg/nvim/bin/"
     - "cp -r nvim-linux-x86_64/* ~/.irun/pkg/nvim/bin/"
+    - "if [ -e $HOME/local/bin/nvim ]; then sudo rm -f $HOME/local/bin/nvim; fi"
+    - "sudo ln -s ~/.irun/pkg/nvim/bin/bin/nvim $HOME/local/bin/nvim"
 
 
 dependencies:
