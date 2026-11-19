@@ -4,7 +4,7 @@ package:
   version: 8.23.0
   description: "Curl is a networking manager often used to download files"
   author: "Curl | Irun Official"
-  id: "aaaa.0000.aaaa.0010"
+  id: "aaaa.0000.aaaa.0011"
 
 install_method: "source"
 
