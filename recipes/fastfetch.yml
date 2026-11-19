@@ -1,4 +1,4 @@
-recipe_version: 8
+recipe_version: 9
 package:
   name: fastfetch
   version: 2.71.0
@@ -29,3 +29,4 @@ dependencies:
   build:
     - "CMake"
     - "vulkan-headers"
+    - "opencl-headers"
