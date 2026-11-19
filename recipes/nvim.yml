@@ -1,0 +1,27 @@
+recipe_version: 1
+package:
+  name: nvim
+  version: 0.12.6
+  description: "neovim is a text editor like vim"
+  author: "NeoVim | Irun Official"
+  id: "aaaa.0000.aaaa.0012"
+  recipe_path: "~/.irun/pkg/nvim/recipe.yml"
+
+install_method: "binary"
+
+binary:
+  url: "https://github.com/neovim/neovim/releases/download/v0.12.6/nvim-linux-x86_64.tar.gz"
+  additional_urls: []
+  sha256: "474430d53e6264f6d6dd18db42d6dc9df3a1b56ca9e88a325bbf860e1a811d87"
+  bin_install_steps:
+    - "cd ~/.irun/tmp"
+    - "tar -xvzf nvim-linux-x86_64.tar.gz"
+    - "mkdir ~/.irun/pkg/nvim/bin/"
+    - "cp -r nvim-linux-x86_64/* ~/.irun/pkg/nvim/bin/
+
+
+dependencies:
+  runtime:
+    - ""
+  build:
+    - ""
