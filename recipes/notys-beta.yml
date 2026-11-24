@@ -1,4 +1,4 @@
-recipe_version: 5
+recipe_version: 6
 package:
   name: Notys-Beta
   version: 1.11.0.b3
@@ -13,16 +13,16 @@ source:
   additional_urls: []
   sha256: "0e84086a56bbebfc5c76fb040af2ee2f585dbb712b2ab8e13daff5f035ec84d5"
   build_steps:
-    - "mkdir ~/.irun/tmp/notys"
-    - "unzip ~/.irun/tmp/Notys-build-env-1.11.0-Beta3.zip -d ~/.irun/tmp/notys/"
-    - "cd ~/.irun/tmp/notys/Notys"
+    - "mkdir ~/.irun/tmp/notys-beta"
+    - "unzip ~/.irun/tmp/Notys-build-env-1.11.0-Beta3.zip -d ~/.irun/tmp/notys-beta/"
+    - "cd ~/.irun/tmp/notys-beta/Notys"
     - "python3 -m pip install --upgrade pip --break-system-packages"
     - "ls -la"
-    - "python3 -m pip install -r notys/Notys/requirements.txt pyinstaller ctk --break-system-packages"
-    - "python3 -m PyInstaller --noconfirm notys/Notys/Notys.spec"
+    - "python3 -m pip install -r notys-beta/Notys/requirements.txt pyinstaller ctk --break-system-packages"
+    - "python3 -m PyInstaller --noconfirm notys-beta/Notys/Notys.spec"
   install_steps:
-    - "mkdir -p ~/.irun/pkg/notys/bin/"
-    - "mv ~/.irun/tmp/notys/Notys/dist/Notys/* ~/.irun/pkg/notys/bin/"
+    - "mkdir -p ~/.irun/pkg/notys-beta/bin/"
+    - "mv ~/.irun/tmp/notys-beta/Notys/dist/Notys/* ~/.irun/pkg/notys-beta/bin/"
       
 dependencies:
   runtime:
