@@ -1,9 +1,9 @@
-recipe_version: 4
+recipe_version: 5
 package:
   name: vlc
   version: 3.0.24
-  description: "VLC is a video player"
-  author: "Jean-Baptiste Kempf"
+  description: "VLC is a free and open source video player"
+  author: "Jean-Baptiste Kempf | Irun Official"
   id: "aaaa.0000.aaaa.0006"
 
 install_method: "source"
@@ -20,7 +20,7 @@ source:
   install_steps:
     - "sudo make -C ~/.irun/tmp/vlc-3.0.24 install"
     - "sudo ldconfig"
-    - "printf '\\033[38;5;208mWARNING: VLC does not currently have a .desktop to have a GUI entry. Please use vlc in the terminal by writing vlc to execute it\\033[0m\\n'"
+    - "printf '\\033[38;5;208mWARNING: VLC does not currently have a .desktop to have a GUI entry. Please use vlc in the terminal by writing vlc to execute it.\\033[0m\\n'"
 
 
 dependencies:
@@ -28,3 +28,4 @@ dependencies:
     - ""
   build:
     - "cmake"
+    - "tar"
